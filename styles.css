@@ -1,12 +1,9 @@
 /* Simple modern styling (no frameworks) */
 :root {
   --bg: #19253b;
-  --card: #182a4a;
   --text: #f9f9f9;
   --muted: #b4bfd9;
   --line: rgba(255, 255, 255, 0.08);
-  --accent: #6ea8ff;
-  --accent2: #7bf0c5;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   --radius: 18px;
 }
@@ -99,9 +96,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* Hero */
-.hero {
-  padding: 70px 0 30px;
-}
+.hero { padding: 70px 0 30px; }
 
 .hero-grid {
   display: grid;
@@ -152,12 +147,13 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
 }
 
-/* Cards */
+/* Shared card styles */
 .hero-card .card,
 .tile,
 .mini-card,
 .quote,
-.form {
+.form,
+.gallery-item {
   background: rgba(16, 24, 39, 0.65);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -190,7 +186,7 @@ a:hover { text-decoration: underline; }
 
 .section-head p { margin: 0; color: var(--muted); }
 
-/* Grid Blocks */
+/* Service tiles */
 .grid-3 {
   margin-top: 20px;
   display: grid;
@@ -198,10 +194,7 @@ a:hover { text-decoration: underline; }
   gap: 14px;
 }
 
-.tile {
-  padding: 18px;
-}
-
+.tile { padding: 18px; }
 .tile h3 { margin: 0 0 8px; }
 .tile p { margin: 0 0 8px; }
 
@@ -216,13 +209,12 @@ a:hover { text-decoration: underline; }
 }
 
 .about-card { display: grid; gap: 12px; }
-
 .mini-card { padding: 16px; }
 
 .mini-title { margin: 0 0 6px; font-weight: 900; }
 .mini-text { margin: 0; color: var(--muted); }
 
-/* Quotes */
+/* Reviews */
 .quote { margin: 0; padding: 18px; }
 .quote blockquote { margin: 0; color: var(--text); }
 
@@ -275,14 +267,10 @@ input:focus, textarea:focus {
 }
 
 .gallery-item {
-  background: rgba(16, 24, 39, 0.65);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow);
 }
 
 .gallery-item img,
@@ -290,9 +278,9 @@ input:focus, textarea:focus {
   width: 100%;
   height: auto;
   max-height: 500px;
-  object-fit: contain;
+  object-fit: contain; /* prevents cropping */
   border-radius: 10px;
-  background: black;
+  background: #000;
 }
 
 /* Footer */
@@ -312,4 +300,6 @@ input:focus, textarea:focus {
   .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .nav-links a:not(.btn) { display: none; } /* keep CTA on small screens */
+  .logo-img { height: 220px; }
+  .container { width: min(1100px, calc(100% - 28px)); }
 }
