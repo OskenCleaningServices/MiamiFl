@@ -10,34 +10,6 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-
-  <script>
-  const translations = {
-    es: {
-      "Services": "Servicios",
-      "Gallery": "Galería",
-      "About": "Sobre Nosotros",
-      "Reviews": "Reseñas",
-      "Estimates": "Cotizaciones",
-      "Request a Free Estimate": "Solicitar Cotización Gratis",
-      "See Services": "Ver Servicios",
-      "Quick Estimate": "Cotización Rápida",
-      "Get a Free Estimate": "Obtén una Cotización Gratis"
-    },
-    en: {}
-  };
-
-  function setLanguage(lang) {
-    document.querySelectorAll("h1, h2, h3, p, a, button, label").forEach(el => {
-      if (!el.dataset.original) {
-        el.dataset.original = el.textContent.trim();
-      }
-
-      const original = el.dataset.original;
-      el.textContent = translations[lang][original] || original;
-    });
-  }
-  </script>
   
   <body>
     <!-- Header -->
@@ -52,8 +24,6 @@
           <a href="#gallery">Gallery</a>
           <a href="#about">About</a>
           <a href="#reviews">Reviews</a>
-          <button onclick="setLanguage('en')" class="lang-btn">English</button>
-          <button onclick="setLanguage('es')" class="lang-btn">Español</button>
           <a class="btn btn-small" href="#contact">Estimates</a>
         </nav>
       </div>
