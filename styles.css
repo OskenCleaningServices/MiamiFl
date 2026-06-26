@@ -111,9 +111,8 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   filter:
-    drop-shadow(0 0 8px rgba(255,255,255,.6))
-    drop-shadow(0 0 18px rgba(255,255,255,.35))
-    drop-shadow(0 12px 30px rgba(255,255,255,.15));
+    drop-shadow(0 0 10px rgba(255,255,255,0.6))
+    drop-shadow(0 0 25px rgba(255,255,255,0.35));
 }
 .hero h1 {
   font-size: clamp(32px, 4vw, 48px);
