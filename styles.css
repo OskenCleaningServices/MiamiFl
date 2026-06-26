@@ -358,7 +358,7 @@ input:focus, textarea:focus {
 @media (max-width: 860px) {
   .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
-  .nav-links a:not(.btn) { display: none; } /* keep CTA on small screens */
+  .nav-links a:not(.lang-btn) {display: none;} /* keep CTA on small screens */
   .logo-img { height: 220px; }
   .slides { aspect-ratio: 4 / 3; }
   .slide-btn { width: 36px; height: 36px; font-size: 26px; }
